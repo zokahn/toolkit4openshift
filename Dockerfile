@@ -1,7 +1,6 @@
-FROM registry.redhat.io/ubi8/ubi-minimal
+FROM registry.access.redhat.com/ubi8/ubi
 
-RUN yum --disableplugin=subscription-manager -y install \
-	  nmap iputils tcpdump \
+RUN yum --disableplugin=subscription-manager -y install nmap iputils iproute procps-ng \
 	    && yum --disableplugin=subscription-manager clean all
 
 USER 1001
