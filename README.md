@@ -38,6 +38,7 @@ Open a session in the pod
 ```oc rsh <pod>```
 
 Or the more elaborate
+
 ```oc exec -it <pod> -- /bin/bash ```
 
 ## Todo
