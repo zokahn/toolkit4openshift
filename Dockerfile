@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi
 
-RUN yum --disableplugin=subscription-manager -y install httpd nmap iputils iproute procps-ng xalan-c\
+RUN yum --disableplugin=subscription-manager -y install httpd nmap iputils iproute procps-ng libxslt \
 	    && yum --disableplugin=subscription-manager clean all
 
 COPY . /var/www/html
