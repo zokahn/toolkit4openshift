@@ -4,6 +4,7 @@ RUN yum --disableplugin=subscription-manager -y install httpd nmap iputils iprou
 	    && yum --disableplugin=subscription-manager clean all
 
 COPY html/. /var/www/html
+COPY bin/. /scripts/bin
 
 RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf \
 		    && chgrp -R 0 /var/log/httpd /var/run/httpd /var/www/html \
