@@ -84,14 +84,8 @@ echo "<td><center>$ram_total</center></td>" >> $html
 echo "<td><center>$inode</center></td>" >> $html
 echo "</tr>" >> $html
 echo "</tbody>" >> $html
-echo "<thead>" >> $html
-echo "<tr>" >> $html
-echo "<th>Size</th>" >> $html
-echo "<th>Name</th>" >> $html
-echo "</tr>" >> $html
-echo "</thead>" >> $html
 echo "<tr>" >> $html
 echo "</table>" >> $html
 echo "</body>" >> $html
 echo "</html>" >> $html
-echo "Report has been generated in ${HOME}/health_reports with file-name" = $html. 
+echo "Report has been generated in ${HOME}/health_reports with file-name" = $html.
