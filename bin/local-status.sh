@@ -27,11 +27,10 @@ then
 fi
 html="${webdir}/health_reports/Server-Health-Report-`hostname`-`date +%y%m%d`-`date +%H%M`.html"
 
-for i in `ls /home`; do sudo du -sh /home/$i/* | sort -nr | grep G; done > /tmp/dir.txt
 #Generating HTML file
 echo "<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">" >> $html
 echo "<html>" >> $html
-echo "<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">" >> $html
+#echo "<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">" >> $html
 echo "<body>" >> $html
 echo "<fieldset>" >> $html
 echo "<center>" >> $html
@@ -85,10 +84,6 @@ echo "<td><center>$ram_total</center></td>" >> $html
 echo "<td><center>$inode</center></td>" >> $html
 echo "</tr>" >> $html
 echo "</tbody>" >> $html
-echo "</table>" >> $html
-echo "<h2>Culprit Directories(Eating up disk space) : </h2>" >> $html
-echo "<br>" >> $html
-echo "<table class="pure-table">" >> $html
 echo "<thead>" >> $html
 echo "<tr>" >> $html
 echo "<th>Size</th>" >> $html
@@ -99,4 +94,4 @@ echo "<tr>" >> $html
 echo "</table>" >> $html
 echo "</body>" >> $html
 echo "</html>" >> $html
-echo "Report has been generated in ${HOME}/health_reports with file-name = $html. 
+echo "Report has been generated in ${HOME}/health_reports with file-name" = $html. 
