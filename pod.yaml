@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: toolkit4openshift
+  labels:
+    role: infra-testing
+spec:
+  containers:
+    - name: toolkit4openshift
+      image: <image> 
+      ports:
+        - name: testpage
+          containerPort: 8080
+          protocol: TCP
