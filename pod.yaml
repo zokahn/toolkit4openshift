@@ -12,3 +12,8 @@ spec:
         - name: testpage
           containerPort: 8080
           protocol: TCP
+      securityContext:
+        capabilities:
+          add:
+            - NET_ADMIN
+            - NET_RAW
