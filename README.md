@@ -20,7 +20,7 @@ In OpenShift workloads run in Pods, sometimes you need to know what the world lo
 Load this git repo via the developer view in the OCP console. Click on add, 'from docker file'.
 Add this repo url, watch it being validated. Dockerfile should be just Dockerfile.
 Add labels where you need to invite certain network policies.
-Press create...
+Press create.
 
 - The container will be build based on the UBI8 image
 - Tools will be installed with yum
